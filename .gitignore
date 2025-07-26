@@ -210,3 +210,7 @@ __marimo__/
 # Font Converter
 FontConverter/InputFolder
 FontConverter/Outputfolder
+
+# Image Converter
+ImageConverter/InputOrdner
+ImageConverter/OutputOrdner
