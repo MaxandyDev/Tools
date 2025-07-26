@@ -1,0 +1,80 @@
+# Build-Verzeichnisse
+bin/
+obj/
+[Bb]uild/
+*.user
+*.suo
+*.cache
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+
+# Rider/JetBrains
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Visual Studio
+.vs/
+*.dbmdl
+*.pdb
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+*.psmdcp
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Sonstige temporäre Dateien
+*.tmp
+*.bak
+*.swp
+*.sdf
+*.ipch
+*.aps
+*.ncb
+*.opensdf
+
+# Auto-Generated Files
+Generated_Code/
+
+# Crash Dumps
+*.dmp
+
+# User Secrets
+secrets.json
+
+# Windows spezifisch
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Mac spezifisch
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Git Merge Tools / Konfliktdateien
+*.orig
+
+# Optional: Test-Ergebnisse
+TestResults/
+*.trx
+
+# PNGs und andere Assets NICHT ignorieren!
+!*.png
+!*.ico
+!Images/**
+

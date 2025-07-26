@@ -1,0 +1,113 @@
+﻿<Window x:Class="Noteblock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Noteblock"
+        xmlns:models="clr-namespace:Noteblock.Models"
+        Title="Notizblock"
+        Width="800" Height="1000"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize">
+
+    <Grid MouseDown="Window_MouseDown">
+        <!-- Hintergrundbild -->
+        <Image Source="Images/schriftrolle.png" Stretch="Fill"/>
+
+        <!-- Fenstersteuerung -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,125,0">
+            <Button x:Name="BtnMinimize" Width="60" Height="60" Background="Transparent" BorderThickness="0" Click="BtnMinimize_Click">
+                <Image Source="Images/minimize_btn.png" Stretch="Uniform" Width="56" Height="56"/>
+            </Button>
+            <Button x:Name="BtnClose" Width="60" Height="60" Background="Transparent" BorderThickness="0" Margin="40,0,0,0" Click="BtnClose_Click">
+                <Image Source="Images/close_app_btn.png" Stretch="Uniform"/>
+            </Button>
+        </StackPanel>
+
+        <!-- Notizliste -->
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled"
+                      Width="550" Height="650"
+                      HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,180,0,0">
+            <ItemsControl x:Name="NotesList" Background="Transparent">
+                <ItemsControl.Resources>
+
+                    <!-- Template für normale Notiz -->
+                    <DataTemplate DataType="{x:Type models:NoteItem}">
+                        <Grid Margin="0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Größere Checkbox -->
+                            <Viewbox Width="60" Height="60" Stretch="Uniform">
+                                <CheckBox Grid.Column="0"
+                                                      IsChecked="{Binding Checked}"
+                                                      VerticalAlignment="Center"
+                                                      FontSize="30"
+                                                      Margin="10,0"/>
+                            </Viewbox>
+
+                            <TextBox Grid.Column="1"
+                                             Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}"
+                                             FontSize="50"
+                                             FontFamily="pack://application:,,,/Fonts/#Comicoro"
+                                             FontWeight="SemiBold"
+                                             VerticalAlignment="Center"
+                                             Background="Transparent"
+                                             BorderThickness="0"
+                                             Foreground="Black"
+                                             Margin="10,0"
+                                             AcceptsReturn="True"
+                                            TextWrapping="Wrap"
+                                            VerticalScrollBarVisibility="Disabled"
+                                            HorizontalScrollBarVisibility="Disabled"
+                                            MinHeight="50">
+                                <TextBox.Style>
+                                    <Style TargetType="TextBox">
+                                        <!-- Standardwert -->
+                                        <Setter Property="IsReadOnly" Value="False"/>
+                                        <Setter Property="TextDecorations" Value="{x:Null}"/>
+
+                                        <!-- Reaktion auf "Checked" -->
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Checked}" Value="True">
+                                                <Setter Property="TextDecorations" Value="Strikethrough"/>
+                                                <Setter Property="IsReadOnly" Value="True"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBox.Style>
+
+                            </TextBox>
+
+                            <!-- Delete-Button -->
+                            <Button Grid.Column="2"
+                                            Width="36"
+                                            Height="36"
+                                            Margin="10,0"
+                                            Background="Transparent"
+                                            BorderThickness="0"
+                                            Click="DeleteButton_Click">
+                                <Image Source="Images/remove-file-icon.png" Stretch="Uniform" Width="28" Height="28"/>
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+
+
+                    <!-- Template für den Add-Button -->
+                    <DataTemplate DataType="{x:Type models:AddNoteButtonMarker}">
+                        <Grid HorizontalAlignment="Center" Margin="0,10">
+                            <Button Click="AddNewButton_Click" Background="Transparent" BorderThickness="0">
+                                <Image Source="Images/add-file-icon.png" Width="40" Height="40"/>
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+
+                </ItemsControl.Resources>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Window>
