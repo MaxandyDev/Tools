@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+	<CornerRadius x:Key="cornerRadiusLabels">10</CornerRadius>
+
+	<Style x:Key="loginAgentBtn" TargetType="Button">
+		<Setter Property="BackgroundColor" Value="#333333" />
+		<Setter Property="TextColor" Value="White" />
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="VerticalOptions" Value="LayoutOptions.Center" />
+		<Setter Property="HorizontalOptions" Value="LayoutOptions.Center" />
+		<Setter Property="CornerRadius" Value="10" />
+	</Style>
+
+	<Style x:Key="loginSlowBtn" TargetType="Button">
+		<Setter Property="BackgroundColor" Value="#333333" />
+		<Setter Property="TextColor" Value="White" />
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="VerticalOptions" Value="LayoutOptions.Center" />
+		<Setter Property="HorizontalOptions" Value="LayoutOptions.Center" />
+		<Setter Property="CornerRadius" Value="10" />
+	</Style>
+
+	<Style x:Key="loginSlowLabel" TargetType="Label">
+		<Setter Property="BackgroundColor" Value="#FF0000" />
+		<Setter Property="TextColor" Value="White" />
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="VerticalTextAlignment" Value="Center" />
+		<Setter Property="HorizontalTextAlignment" Value="Center" />
+	</Style>
+
+	<Style x:Key="vertLayout" TargetType="VerticalStackLayout">
+		<Setter Property="VerticalOptions" Value="LayoutOptions.Center" />
+		<Setter Property="HorizontalOptions" Value="LayoutOptions.Center" />
+		<Setter Property="Spacing" Value="20" />
+		<Setter Property="Padding" Value="0,200,0,50" />
+	</Style>
+
+	<Style x:Key="horLayout" TargetType="HorizontalStackLayout">
+		<Setter Property="VerticalOptions" Value="LayoutOptions.Center" />
+		<Setter Property="HorizontalOptions" Value="LayoutOptions.Center" />
+		<Setter Property="Spacing" Value="10" />
+	</Style>
+
+	<Style x:Key="borderStyle" TargetType="Border">
+		<Setter Property="BackgroundColor" Value="#333333" />
+	</Style>
+
+</ResourceDictionary>

@@ -1,0 +1,66 @@
+{
+  "seleniumConf": {
+    "loginURL": "some URL",
+    "emailID": "some ID",
+    "continueBtn": "some ID",
+    "passwordID": "some ID",
+    "loginBtn": "some ID"
+  },
+  "agents": {
+    "1": {
+      "email": "agent1@example.com",
+      "password": "password1",
+      "slowAgent": false
+    },
+    "2": {
+      "email": "agent2@example.com",
+      "password": "password2",
+      "slowAgent": false
+    },
+    "3": {
+      "email": "agent3@example.com",
+      "password": "password3",
+      "slowAgent": false
+    },
+    "4": {
+      "email": "agent3@example.com",
+      "password": "password3",
+      "slowAgent": false
+    },
+    "5": {
+      "email": "agent3@example.com",
+      "password": "password3",
+      "slowAgent": false
+    },
+    "6": {
+      "email": "agent3@example.com",
+      "password": "password3",
+      "slowAgent": false
+    },
+    "7": {
+      "email": "agent2@example.com",
+      "password": "password2",
+      "slowAgent": false
+    },
+    "8": {
+      "email": "agent3@example.com",
+      "password": "password3",
+      "slowAgent": false
+    },
+    "9": {
+      "email": "agent3@example.com",
+      "password": "password3",
+      "slowAgent": false
+    },
+    "10": {
+      "email": "agent3@example.com",
+      "password": "password3",
+      "slowAgent": false
+    },
+    "11": {
+      "email": "agent3@example.com",
+      "password": "password3",
+      "slowAgent": false
+    }
+  }
+}

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AI_Image_Agents.MainPage"
+             Title=""
+             BackgroundImageSource="background.png">
+    <!-- BackgroundImageSource="Pfad" -->
+
+    <VerticalStackLayout
+        x:Name="RootLayout"
+        Spacing="50"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+        <Button
+            x:Name="Btn1"
+            Text="LoginAgent"
+            HeightRequest="50"
+            WidthRequest="250"
+            Clicked="Btn1Clicked"
+            Style="{StaticResource mainBtn}"
+            >
+        </Button>
+
+        <Button
+            x:Name="Btn2"
+            Text="PromptManager"
+            Clicked="Btn2Clicked"
+            Style="{StaticResource mainBtn}"
+            >
+        </Button>
+
+        <Button
+            x:Name="Btn3"
+            Text="Exit"
+            Clicked="Btn3Clicked"
+            Style="{StaticResource mainBtn}"
+            >
+        </Button>
+
+    </VerticalStackLayout>
+
+    
+
+</ContentPage>
